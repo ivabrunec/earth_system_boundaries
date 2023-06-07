@@ -1,0 +1,9 @@
+index,global_measure,current_state,safe_just_boundary,percentage_over_allowed,polygon_top,label
+1,aerosol_pollutants,0.05,0.15,-33.33,66.67,Aerosols
+2,rise_in_temp,1.2,1,20,120,Global rise in temperature
+3,agricultural_phosphorus,10,9,10,110,Agricultural phosphorus
+4,agricultural_nitrogen,119,57,52.10084034,152.1008403,Agricultural nitrogen
+5,percentage_natural_habitat,36,100,64,164,Semi-natural habitat loss
+6,percentage_natural_ecosystems,50,60,10,110,Intact natural ecosystem loss
+7,percentage_river_basins,47,0,47,147,Over-extracted rivers
+8,percentage_natural_stream,34,0,34,134,Alteration of natural river flow
