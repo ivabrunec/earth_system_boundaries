@@ -140,7 +140,7 @@ for (i in 2:nrow(data)){
 p_main <- base_plot3 +
   geom_text(data = data, aes(x = x_index+.5, y = -2, label=label), angle = 30,
             hjust = 1, family = 'Chivo', size = 16) +
-  labs(title = 'SAFE AND JUST LIMIT',
+  labs(caption = 'SAFE AND JUST LIMIT',
        subtitle = "
        The red horizontal plane represents the 'safe and just limit' for 8 indicators of planetary health.\n
        The bars extending above this plane represent the percentage beyond the limit for each of these measures.") +
@@ -153,7 +153,7 @@ p_main <- base_plot3 +
                                         color = 'grey50'),
         panel.grid.major = element_line(linewidth = .2, linetype = 'dashed',
                                         color = 'grey50'),
-        plot.title = element_text(family = 'Staatliches', size = 280,
+        plot.caption = element_text(family = 'Staatliches', size = 280,
                                   color = 'grey10', hjust=.1),
         plot.subtitle = element_text(family = 'Chivo', size = 50, 
                                     color = 'grey10', lineheight = .15)) +
@@ -348,7 +348,7 @@ p4 <- ggplot() +
                                               padding = margin(5, 5, 5, 5)),
         plot.margin = margin(10,10,10,10)) 
 p4
-ggsave('plot4.png', height = 6, width = 8, dpi = 300)
+ggsave('plot4.png', height = 5, width = 8, dpi = 300)
 
 
 ## plot 5: surplus of nitrogen  ####
@@ -357,7 +357,7 @@ nitro_data <- data.frame(
   tonnes = c(57,119-57),
   categ = c('1','2')
 )
-nitro_data <- uncount(nitro_data, tonnes)
+nitro_data <- tidyr::uncount(nitro_data, tonnes)
 nitro_data$count <- 1
 
 nitro_waffle <- waffle_iron(nitro_data, aes_d(group = categ))
@@ -392,7 +392,7 @@ p5 <- ggplot(nitro_waffle, aes(x, y, fill = group)) +
         plot.margin = margin(10,10,10,10)) 
 
 p5
-ggsave('plot5.png', height = 6, width = 8, dpi = 300)
+ggsave('plot5.png', height = 5, width = 8, dpi = 300)
 
 ## plot 6: surplus of phosphorus ####
 phospho_data <- data.frame(
